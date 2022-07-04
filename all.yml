@@ -1,0 +1,24 @@
+---
+
+- name: Cisco DNAC
+  hosts: dnac
+  connection: httpapi
+  gather_facts: no
+  
+  tasks:
+  
+  - include_vars: main.yml
+
+  - name: Create DNAC Site
+    cisco.dnac.site_create:
+      dnac_host: "{{ dnac_host}}"
+      dnac_username: "{{ dnac_username }}"
+      dnac_password: "{{ dnac_password }}"
+      dnac_verify: no
+      dnac_port: 443
+      #dnac_debug: yes
+      site:
+        area:
+          name: Portugal
+          parentName: Global
+#    loop: "{{ sites }}"    
