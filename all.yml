@@ -1,7 +1,7 @@
 ---
 
 - name: Cisco DNAC
-  hosts: dnac
+  hosts: sandboxdnac
   connection: httpapi
   gather_facts: no
   
