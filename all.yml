@@ -9,6 +9,10 @@
   
   - include_vars: main.yml
 
+  - name: debug
+    debug:
+      msg: "Hello"
+
   - name: Create DNAC Site
     cisco.dnac.site_create:
       dnac_host: "{{ dnac_host}}"
