@@ -2,7 +2,7 @@
 
 - name: Cisco DNAC
   hosts: sandboxdnac
-  connection: httpapi
+  connection: local
   gather_facts: no
   
   tasks:
