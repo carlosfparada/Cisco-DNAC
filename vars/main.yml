@@ -1,6 +1,6 @@
 ---
 
-dnac_host: "https://sandboxdnac2.cisco.com"
+dnac_host: "sandboxdnac.cisco.com"
 dnac_username: "devnetuser"
 dnac_password: "Cisco123!"
 
