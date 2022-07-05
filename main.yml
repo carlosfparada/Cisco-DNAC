@@ -114,21 +114,6 @@
     debug:
       var: _network_device
 
-  # - name: Query DNAC Wireless Profile query
-  #   cisco.dnac.wireless_profile_info:
-  #     dnac_host: "{{ dnac_host}}"
-  #     dnac_username: "{{ dnac_username }}"
-  #     dnac_password: "{{ dnac_password }}"
-  #     dnac_verify: "{{ dnac_verify }}"
-  #     dnac_port: "{{ dnac_port }}"
-  #     dnac_version: "{{ dnac_version }}"
-  #     dnac_debug: "{{ dnac_debug }}"
-  #   register: _wireless_profile
-
-  # - name: Debug DNAC Wireless Profile query
-  #   debug:
-  #     var: _wireless_profile
-
   - name: Query DNAC Event Subscription query
     cisco.dnac.event_subscription_info:
       dnac_host: "{{ dnac_host}}"
