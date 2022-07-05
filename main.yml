@@ -18,15 +18,34 @@
       dnac_host: "{{ dnac_host}}"
       dnac_username: "{{ dnac_username }}"
       dnac_password: "{{ dnac_password }}"
-      dnac_verify: no
-      dnac_port: 443
-      dnac_version: "2.2.3.3"
-      dnac_debug: yes
+      dnac_verify: "{{ dnac_verify }}"
+      dnac_port: "{{ dnac_port }}"
+      dnac_version: "{{ dnac_version }}"
+      dnac_debug: "{{ dnac_version }}"
     register: _sites
 
-  - name: Debug query
+  - name: Debug DNAC Sites query
     debug:
       var: _sites
+
+  - name: Query DNAC Network
+    cisco.dnac.network_info:
+      dnac_host: "{{ dnac_host}}"
+      dnac_username: "{{ dnac_username }}"
+      dnac_password: "{{ dnac_password }}"
+      dnac_verify: "{{ dnac_verify }}"
+      dnac_port: "{{ dnac_port }}"
+      dnac_version: "{{ dnac_version }}"
+      dnac_debug: "{{ dnac_version }}"
+    register: _network
+
+  - name: Debug DNAC Network query
+    debug:
+      var: _network
+
+
+
+
 
 #   - name: Create DNAC Sites
 #     cisco.dnac.site_create:
