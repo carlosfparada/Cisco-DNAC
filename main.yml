@@ -21,7 +21,7 @@
       dnac_verify: "{{ dnac_verify }}"
       dnac_port: "{{ dnac_port }}"
       dnac_version: "{{ dnac_version }}"
-      dnac_debug: "{{ dnac_version }}"
+      dnac_debug: "{{ dnac_debug }}"
     register: _sites
 
   - name: Debug DNAC Sites query
@@ -52,12 +52,12 @@
 #       dnac_host: "{{ dnac_host}}"
 #       dnac_username: "{{ dnac_username }}"
 #       dnac_password: "{{ dnac_password }}"
-#       dnac_verify: no
-#       dnac_port: 443
-#       dnac_version: "2.2.3.3"
-#       dnac_debug: yes
+#       dnac_verify: "{{ dnac_verify }}"
+#       dnac_port: "{{ dnac_port }}"
+#       dnac_version: "{{ dnac_version }}"
+#       dnac_debug: "{{ dnac_debug }}"
 #       site:
 #         area:
 #           name: Portugal
 #           parentName: Global
-# #    loop: "{{ sites }}"    
+# #   loop: "{{ sites }}"    
