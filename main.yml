@@ -14,7 +14,7 @@
       msg: "Hello"
 
   - name: Query DNAC Sites
-    cisco.dnac.site_create:
+    cisco.dnac.site_info:
       dnac_host: "{{ dnac_host}}"
       dnac_username: "{{ dnac_username }}"
       dnac_password: "{{ dnac_password }}"
