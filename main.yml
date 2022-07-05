@@ -84,6 +84,21 @@
     debug:
       var: _credentials
 
+  - name: Query DNAC Client Details query
+    cisco.dnac.client_detail_info:
+      dnac_host: "{{ dnac_host}}"
+      dnac_username: "{{ dnac_username }}"
+      dnac_password: "{{ dnac_password }}"
+      dnac_verify: "{{ dnac_verify }}"
+      dnac_port: "{{ dnac_port }}"
+      dnac_version: "{{ dnac_version }}"
+      dnac_debug: "{{ dnac_debug }}"
+    register: _client_details
+
+  - name: Debug DNAC Client Details query
+    debug:
+      var: _client_details
+
 
   # - name: Query DNAC Discovery
   #   cisco.dnac.discovery:
