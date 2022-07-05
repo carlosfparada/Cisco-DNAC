@@ -63,6 +63,8 @@
       dnac_port: "{{ dnac_port }}"
       dnac_version: "{{ dnac_version }}"
       dnac_debug: "{{ dnac_debug }}"
+      id: discovery_test1
+      name: discovery_test1
     register: _discovery
 
   - name: Debug DNAC Discovery query
