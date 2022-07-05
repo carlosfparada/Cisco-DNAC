@@ -84,8 +84,8 @@
     debug:
       var: _credentials
 
-  - name: Query DNAC Client Details query
-    cisco.dnac.client_detail_info:
+  - name: Query DNAC Configuration Template query
+    cisco.dnac.configuration_template_info:
       dnac_host: "{{ dnac_host}}"
       dnac_username: "{{ dnac_username }}"
       dnac_password: "{{ dnac_password }}"
@@ -93,29 +93,72 @@
       dnac_port: "{{ dnac_port }}"
       dnac_version: "{{ dnac_version }}"
       dnac_debug: "{{ dnac_debug }}"
-    register: _client_details
+    register: _configuration_template
 
-  - name: Debug DNAC Client Details query
+  - name: Debug DNAC Configuration Template query
     debug:
-      var: _client_details
+      var: _configuration_template
 
+  - name: Query DNAC Device Details query
+    cisco.dnac.device_details_info:
+      dnac_host: "{{ dnac_host}}"
+      dnac_username: "{{ dnac_username }}"
+      dnac_password: "{{ dnac_password }}"
+      dnac_verify: "{{ dnac_verify }}"
+      dnac_port: "{{ dnac_port }}"
+      dnac_version: "{{ dnac_version }}"
+      dnac_debug: "{{ dnac_debug }}"
+    register: _device_details
 
-  # - name: Query DNAC Discovery
-  #   cisco.dnac.discovery:
-  #     dnac_host: "{{ dnac_host}}"
-  #     dnac_username: "{{ dnac_username }}"
-  #     dnac_password: "{{ dnac_password }}"
-  #     dnac_verify: "{{ dnac_verify }}"
-  #     dnac_port: "{{ dnac_port }}"
-  #     dnac_version: "{{ dnac_version }}"
-  #     dnac_debug: "{{ dnac_debug }}"
-  #     id: discovery_test1
-  #     name: discovery_test1
-  #   register: _discovery
+  - name: Debug DNAC Device Details query
+    debug:
+      var: _device_details
 
-  # - name: Debug DNAC Discovery query
-  #   debug:
-  #     var: _discovery
+  - name: Query DNAC Network Device query
+    cisco.dnac.network_device_info:
+      dnac_host: "{{ dnac_host}}"
+      dnac_username: "{{ dnac_username }}"
+      dnac_password: "{{ dnac_password }}"
+      dnac_verify: "{{ dnac_verify }}"
+      dnac_port: "{{ dnac_port }}"
+      dnac_version: "{{ dnac_version }}"
+      dnac_debug: "{{ dnac_debug }}"
+    register: _network_device
+
+  - name: Debug DNAC Network Device query
+    debug:
+      var: _network_device
+
+  - name: Query DNAC Wireless Profile query
+    cisco.dnac.wireless_profile_info:
+      dnac_host: "{{ dnac_host}}"
+      dnac_username: "{{ dnac_username }}"
+      dnac_password: "{{ dnac_password }}"
+      dnac_verify: "{{ dnac_verify }}"
+      dnac_port: "{{ dnac_port }}"
+      dnac_version: "{{ dnac_version }}"
+      dnac_debug: "{{ dnac_debug }}"
+    register: _wireless_profile
+
+  - name: Debug DNAC Wireless Profile query
+    debug:
+      var: _wireless_profile
+
+  - name: Query DNAC Event Subscription query
+    cisco.dnac.event_subscription_info:
+      dnac_host: "{{ dnac_host}}"
+      dnac_username: "{{ dnac_username }}"
+      dnac_password: "{{ dnac_password }}"
+      dnac_verify: "{{ dnac_verify }}"
+      dnac_port: "{{ dnac_port }}"
+      dnac_version: "{{ dnac_version }}"
+      dnac_debug: "{{ dnac_debug }}"
+    register: _device_details
+
+  - name: Debug DNAC Event Subscription query
+    debug:
+      var: _device_details
+
 
 
 #   - name: Create DNAC Sites
