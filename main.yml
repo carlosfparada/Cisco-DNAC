@@ -36,7 +36,7 @@
       dnac_verify: "{{ dnac_verify }}"
       dnac_port: "{{ dnac_port }}"
       dnac_version: "{{ dnac_version }}"
-      dnac_debug: "{{ dnac_version }}"
+      dnac_debug: "{{ dnac_debug }}"
     register: _networks
 
   - name: Debug DNAC Network query
