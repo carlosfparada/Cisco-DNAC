@@ -23,21 +23,22 @@
       dnac_version: "2.2.3.3"
       dnac_debug: yes
     register: _sites
-  - name: Debug start
+
+  - name: Debug query
     debug:
       var: _sites
 
-  - name: Create DNAC Sites
-    cisco.dnac.site_create:
-      dnac_host: "{{ dnac_host}}"
-      dnac_username: "{{ dnac_username }}"
-      dnac_password: "{{ dnac_password }}"
-      dnac_verify: no
-      dnac_port: 443
-      dnac_version: "2.2.3.3"
-      dnac_debug: yes
-      site:
-        area:
-          name: Portugal
-          parentName: Global
-#    loop: "{{ sites }}"    
+#   - name: Create DNAC Sites
+#     cisco.dnac.site_create:
+#       dnac_host: "{{ dnac_host}}"
+#       dnac_username: "{{ dnac_username }}"
+#       dnac_password: "{{ dnac_password }}"
+#       dnac_verify: no
+#       dnac_port: 443
+#       dnac_version: "2.2.3.3"
+#       dnac_debug: yes
+#       site:
+#         area:
+#           name: Portugal
+#           parentName: Global
+# #    loop: "{{ sites }}"    
