@@ -54,8 +54,8 @@
     debug:
       var: _app_policies
 
-  - name: Query DNAC Discovery
-    cisco.dnac.discovery:
+  - name: Query DNAC Device Interfaces query
+    cisco.dnac.device_interface_info:
       dnac_host: "{{ dnac_host}}"
       dnac_username: "{{ dnac_username }}"
       dnac_password: "{{ dnac_password }}"
@@ -63,13 +63,29 @@
       dnac_port: "{{ dnac_port }}"
       dnac_version: "{{ dnac_version }}"
       dnac_debug: "{{ dnac_debug }}"
-      id: discovery_test1
-      name: discovery_test1
-    register: _discovery
+    register: _device_interfaces
 
-  - name: Debug DNAC Discovery query
+  - name: Debug DNAC Device Interfaces query
     debug:
-      var: _discovery
+      var: _device_interfaces
+
+
+  # - name: Query DNAC Discovery
+  #   cisco.dnac.discovery:
+  #     dnac_host: "{{ dnac_host}}"
+  #     dnac_username: "{{ dnac_username }}"
+  #     dnac_password: "{{ dnac_password }}"
+  #     dnac_verify: "{{ dnac_verify }}"
+  #     dnac_port: "{{ dnac_port }}"
+  #     dnac_version: "{{ dnac_version }}"
+  #     dnac_debug: "{{ dnac_debug }}"
+  #     id: discovery_test1
+  #     name: discovery_test1
+  #   register: _discovery
+
+  # - name: Debug DNAC Discovery query
+  #   debug:
+  #     var: _discovery
 
 
 #   - name: Create DNAC Sites
