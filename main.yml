@@ -40,7 +40,7 @@
       var: _networks
 
   - name: Query DNAC App Policies
-    cisco.dnac.network_info:
+    cisco.dnac.app_policy_info:
       dnac_host: "{{ dnac_host}}"
       dnac_username: "{{ dnac_username }}"
       dnac_password: "{{ dnac_password }}"
