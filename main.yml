@@ -69,6 +69,21 @@
     debug:
       var: _device_interfaces
 
+  - name: Query DNAC Credentials query
+    cisco.dnac.device_credential_info:
+      dnac_host: "{{ dnac_host}}"
+      dnac_username: "{{ dnac_username }}"
+      dnac_password: "{{ dnac_password }}"
+      dnac_verify: "{{ dnac_verify }}"
+      dnac_port: "{{ dnac_port }}"
+      dnac_version: "{{ dnac_version }}"
+      dnac_debug: "{{ dnac_debug }}"
+    register: _credentials
+
+  - name: Debug DNAC Credentials query
+    debug:
+      var: _credentials
+
 
   # - name: Query DNAC Discovery
   #   cisco.dnac.discovery:
