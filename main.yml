@@ -1,9 +1,9 @@
 ---
 
 - name: Cisco DNAC
-  hosts: sandboxdnac
+  hosts: localhost
   connection: local
-  gather_facts: no
+  gather_facts: false
   
   tasks:
   
@@ -21,7 +21,7 @@
       dnac_verify: no
       dnac_port: 443
       dnac_version: "2.2.3.3"
-      #dnac_debug: yes
+      dnac_debug: yes
       site:
         area:
           name: Portugal
