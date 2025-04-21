@@ -4,10 +4,8 @@
   hosts: localhost
   connection: local
   gather_facts: false
-  
+  vars_files: vars/main.yml
   tasks:
-  
-  - include_vars: main.yml
 
   - name: Query DNAC Sites
     cisco.dnac.site_info:
