@@ -121,11 +121,11 @@
       dnac_port: "{{ dnac_port }}"
       # dnac_version: "{{ dnac_version }}"
       dnac_debug: "{{ dnac_debug }}"
-    register: _device_details
+    register: _subscription_details
 
   - name: Debug DNAC Event Subscription query
     debug:
-      var: _device_details
+      var: _subscription_details
 
   - name: Create DNAC Sites
     cisco.dnac.site_create:
