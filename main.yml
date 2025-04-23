@@ -7,10 +7,6 @@
   vars_files: main.yml
   tasks:
 
-  - name: Debug
-    ansible.builtin.debug:
-      msg: "test {{ dnac_host }}"
-
   - name: Query DNAC Sites
     cisco.dnac.site_info:
       dnac_host: "{{ dnac_host}}"
