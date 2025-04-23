@@ -7,7 +7,7 @@ dnac_host: "sandboxdnac.cisco.com"
 dnac_username: "devnetuser"
 dnac_password: "Cisco123!"
 
-dnac_verify: yes
+dnac_verify: no
 dnac_port: 443
 dnac_version: "2.2.3.3"
 dnac_debug: yes
