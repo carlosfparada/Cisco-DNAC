@@ -41,20 +41,20 @@
     debug:
       var: _networks
 
-  - name: Query DNAC App Policies
-    cisco.dnac.app_policy_info:
-      dnac_host: "{{ dnac_host}}"
-      dnac_username: "{{ dnac_username }}"
-      dnac_password: "{{ dnac_password }}"
-      dnac_verify: "{{ dnac_verify }}"
-      dnac_port: "{{ dnac_port }}"
-      # dnac_version: "{{ dnac_version }}"
-      dnac_debug: "{{ dnac_debug }}"
-    register: _app_policies
+  # - name: Query DNAC App Policies
+  #   cisco.dnac.app_policy_info:
+  #     dnac_host: "{{ dnac_host}}"
+  #     dnac_username: "{{ dnac_username }}"
+  #     dnac_password: "{{ dnac_password }}"
+  #     dnac_verify: "{{ dnac_verify }}"
+  #     dnac_port: "{{ dnac_port }}"
+  #     # dnac_version: "{{ dnac_version }}"
+  #     dnac_debug: "{{ dnac_debug }}"
+  #   register: _app_policies
 
-  - name: Debug DNAC App Policies query
-    debug:
-      var: _app_policies
+  # - name: Debug DNAC App Policies query
+  #   debug:
+  #     var: _app_policies
 
   - name: Query DNAC Device Interfaces query
     cisco.dnac.device_interface_info:
