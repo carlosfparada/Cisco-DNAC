@@ -18,7 +18,7 @@
       dnac_password: "{{ dnac_password }}"
       dnac_verify: "{{ dnac_verify }}"
       dnac_port: "{{ dnac_port }}"
-      dnac_version: "{{ dnac_version }}"
+      # dnac_version: "{{ dnac_version }}"
       dnac_debug: "{{ dnac_debug }}"
     register: _sites
 
@@ -33,7 +33,7 @@
       dnac_password: "{{ dnac_password }}"
       dnac_verify: "{{ dnac_verify }}"
       dnac_port: "{{ dnac_port }}"
-      dnac_version: "{{ dnac_version }}"
+      # dnac_version: "{{ dnac_version }}"
       dnac_debug: "{{ dnac_debug }}"
     register: _networks
 
@@ -48,7 +48,7 @@
       dnac_password: "{{ dnac_password }}"
       dnac_verify: "{{ dnac_verify }}"
       dnac_port: "{{ dnac_port }}"
-      dnac_version: "{{ dnac_version }}"
+      # dnac_version: "{{ dnac_version }}"
       dnac_debug: "{{ dnac_debug }}"
     register: _app_policies
 
@@ -63,7 +63,7 @@
       dnac_password: "{{ dnac_password }}"
       dnac_verify: "{{ dnac_verify }}"
       dnac_port: "{{ dnac_port }}"
-      dnac_version: "{{ dnac_version }}"
+      # dnac_version: "{{ dnac_version }}"
       dnac_debug: "{{ dnac_debug }}"
     register: _device_interfaces
 
@@ -78,7 +78,7 @@
       dnac_password: "{{ dnac_password }}"
       dnac_verify: "{{ dnac_verify }}"
       dnac_port: "{{ dnac_port }}"
-      dnac_version: "{{ dnac_version }}"
+      # dnac_version: "{{ dnac_version }}"
       dnac_debug: "{{ dnac_debug }}"
     register: _credentials
 
@@ -93,7 +93,7 @@
       dnac_password: "{{ dnac_password }}"
       dnac_verify: "{{ dnac_verify }}"
       dnac_port: "{{ dnac_port }}"
-      dnac_version: "{{ dnac_version }}"
+      # dnac_version: "{{ dnac_version }}"
       dnac_debug: "{{ dnac_debug }}"
     register: _configuration_template
 
@@ -108,7 +108,7 @@
       dnac_password: "{{ dnac_password }}"
       dnac_verify: "{{ dnac_verify }}"
       dnac_port: "{{ dnac_port }}"
-      dnac_version: "{{ dnac_version }}"
+      # dnac_version: "{{ dnac_version }}"
       dnac_debug: "{{ dnac_debug }}"
     register: _network_device
 
@@ -123,7 +123,7 @@
       dnac_password: "{{ dnac_password }}"
       dnac_verify: "{{ dnac_verify }}"
       dnac_port: "{{ dnac_port }}"
-      dnac_version: "{{ dnac_version }}"
+      # dnac_version: "{{ dnac_version }}"
       dnac_debug: "{{ dnac_debug }}"
     register: _device_details
 
@@ -138,7 +138,7 @@
       dnac_password: "{{ dnac_password }}"
       dnac_verify: "{{ dnac_verify }}"
       dnac_port: "{{ dnac_port }}"
-      dnac_version: "{{ dnac_version }}"
+      # dnac_version: "{{ dnac_version }}"
       dnac_debug: "{{ dnac_debug }}"
       site:
         area:
